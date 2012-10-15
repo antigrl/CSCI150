@@ -1,0 +1,108 @@
+8/29/2012
+
+lowercase.split()
+pieces = lowercase.split()
+pieces.reverse()
+''.join(pieces)
+
+
+lowercase = 'kevin scannell'
+
+lowercase[2]
+'v'
+lowercase[2:4]
+'vi'
+lowercase[2:7]
+'vin s'
+lowercase[4:len(lowercase)]
+'n scannell'
+lowercase[3:]
+'in scannell'
+lowercase[:5]
+'kevin'
+lowercase[0:9:2]
+'kvnsa'
+
+
+8/31/2012
+
+# Turns str into a float.
+answer = float(raw_input('Enter degrees farenheit: '))
+
+9/5/2012
+
+(modules)
+
+import math
+math.pi
+>3.14....
+math.e
+>2.71....
+round(math.pi,4)
+>3.1416
+from math import *
+pi
+>3.14....
+e
+>2.71....
+sin(pi/4)
+>0.7071..
+sqrt(2)/2
+>0.7071..
+sin(pi/4) == sqrt(2)/2
+>false
+
+import random
+random.randint(1,6)
+
+import time
+time.sleep(5)
+pause of 5 seconds then loads prompt
+
+import datetime (access to system clock)
+today = datetime.date.tody()
+today
+>>datetime.date(2012, 9, 5)
+type (today)
+>> type 'dattime.date'
+
+today.strftime('&Y-&m0&d')
+>> 2012-09-05
+
+import os
+os.name
+>>'posix'
+
+5 == 5
+>> true
+
+t = 7
+t == 7
+>>true
+answer = t==7
+type(answer)
+>>type 'bool'
+answer
+>> true
+
+x = 2
+y = 4
+x == 2
+>> True
+x==2 and y==4
+>>True
+x!=2
+>>False
+x==2 or y==3
+>>True
+x==6 or y==9
+>>False
+
+9/17
+c = Canvas()
+# Prevents flickering
+c.setAutoRefresh(False)
+c.refresh()
+
+Sent future email in an email to wess
+wgardne1@slu.edu and cc kevin

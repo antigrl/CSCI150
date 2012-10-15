@@ -1,0 +1,1 @@
+deposits = [entry for entry in transactions if entry > 0]
