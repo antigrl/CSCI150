@@ -1,7 +1,12 @@
-def List:
+collection = ['three','three','seven','twenty','four','three','eleven']
+value = 'three'
 
-	def List(self):
-	self._groceries = ('Cheese','Cheese','bread','cereal')
+def count(self,value):
+	count = 0
+	for object in self:
+		if object == value:
+			count += 1
+	return count
 
-	def count(self,value):
+print count(collection,value)
 		

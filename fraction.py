@@ -1,4 +1,4 @@
-import gcd
+from fractions import gcd
 
 class Fraction:
 
@@ -28,6 +28,9 @@ class Fraction:
 	def __div__(self, other):
 		return Fraction(self._numer * other._denom, self._denom * other._numer)
 
+	def __neg__(self):
+		return Fraction(-self._numer, self._denom)
+
 ########## Comparison Methods ###############
 	def __lt__(self, other):
 		return self._numer * other._denom, self._denom * other._numer
@@ -49,3 +52,19 @@ class Fraction:
 			return str(self._numer)
 		else:
 			return str(self._numer) + '/' + str(self._denom)
+
+	def invert(self):
+		return Fraction(self._denom, self._numer)
+
+
+# Unit Test
+
+if __name__ == '__main__':
+	fracTest = Fraction(5,9)
+	reciprical = fracTest.invert()
+	print reciprical
+
+
+
+
+

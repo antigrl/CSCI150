@@ -1,6 +1,7 @@
 word = 'slice'
-index = 0 
-while index < len(word): 
-	letter = word[index] 
-	print letter
-	index = index + 1 
+
+for i in range(1,len(word)+1,1):
+	print word[:i]
+
+	
+	
