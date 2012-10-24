@@ -38,13 +38,6 @@ class Date:
 			return Date.monthLengths[self._month-1]
 
 
-
-
-
-		
-
-
-
 if __name__ == "__main__":
 	theNextDay = Date(12,31,2000)
 	theNextDay.upDate()
