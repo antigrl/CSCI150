@@ -12,6 +12,8 @@ while line:
 	numchars = numchars + len(line)
 
 
+
 print numlines, numwords, numchars
+source.close()
 
 
