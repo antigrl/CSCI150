@@ -1,7 +1,7 @@
 from cs1graphics import *
 
 class Star(Drawable):
-	def __init__(self, numRays=5, outerRadius=10, innerRatio=.5, center=Point(0,0), bodyColor = 'green'):
+	def __init__(self, numRays=5, outerRadius=10, innerRatio=.5, center=Point(50,50), bodyColor = 'green'):
 		Drawable.__init__(self)			         # call the parent constructor
 		top = Point(0, -outerRadius)	         # top point is directly above origin
 		angle = 180.0 / numRays
@@ -23,15 +23,12 @@ class Star(Drawable):
 		    self._polygon.setPoint(factor * self.getPoint(i), i)
 
 	def setBorderWidth(self, BorderWidth):
-		BorderWidth = 2
-		self._polygon.setFillColor(BorderWidth)
+		self._polygon.setBorderWidth(BorderWidth)
 
 	def setBorderColor(self, BorderColor):
-		BorderColor = 'black'
 		self._polygon.setBorderColor(BorderColor)
 
 	def setFillColor(self, FillColor):
-		FillColor = 'green'
 		self._polygon.setFillColor(FillColor)
 
 	def _draw(self):
@@ -40,5 +37,11 @@ class Star(Drawable):
 		self._completeDraw()                      # required protocol
 
 if __name__ == '__main__':
+	# Unit test
+	star = Star()
 	screen = Canvas()
-	screen.add(Star())
+	screen.add(star)
+	star.setFillColor('green')
+	star.setBorderColor('red')
+	star.setBorderWidth(3)
+
