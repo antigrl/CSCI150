@@ -18,8 +18,9 @@ class Vocabulary():
 	def check(self, file):
 		f = open(file)
 		words = list()
+		symbols = [",", ".", "?", "!", "..."]
 		for entry in f:
-			for word in entry.rstrip('\n').split():
+			for word in entry.strip('\n',symbols).split():
 				words.append(word)
 
 		invalidWords = list()
@@ -27,6 +28,8 @@ class Vocabulary():
 			if word not in self:
 				invalidWords.append(word)
 		return invalidWords
+
+
 
 if __name__ == '__main__':
 	# unit test
