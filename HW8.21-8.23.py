@@ -38,11 +38,11 @@ class Vocabulary():
 
 				if word not in self:
 					print word, lineNum
-					prompt = raw_input("Would you like to ignore(I) or replace(R) spelling mistake?")
-					if prompt is "i":
+					prompt = raw_input('Would you like to ignore(I) or replace(R) spelling mistake?')
+					if prompt is 'i':
 						o.write(word + ' ')
-					if prompt is "r":
-						newWord = raw_input("Replace the word: ")
+					if prompt is 'r':
+						newWord = raw_input('Replace the word: ')
 						o.write(newWord + ' ')
 				else:
 					o.write(word + ' ')
